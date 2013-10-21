@@ -1,7 +1,7 @@
-Xamarin Android iBeacon Service Binding
-=======================================
+Xamarin.Android iBeacon Service
+===============================
 
-A Xamarin Android Binding of the [RadiusNetworks Android iBeacon Service](https://github.com/RadiusNetworks/android-ibeacon-service)
+A Xamarin.Android binding of the [RadiusNetworks Android iBeacon Service](https://github.com/RadiusNetworks/android-ibeacon-service)
 
 
 ## License
