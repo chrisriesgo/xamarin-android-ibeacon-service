@@ -1,0 +1,54 @@
+<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+  <!-- Change the Namespace to avoid Type/Namespace name collisions -->
+  <attr path="/api/package[@name='com.radiusnetworks.ibeacon']" name="managedName">RadiusNetworks.IBeaconAndroid</attr>
+  <attr path="/api/package[@name='com.radiusnetworks.ibeacon.service']" name="managedName">RadiusNetworks.IBeaconAndroid.Service</attr>
+
+  <!-- Hide internal class because it attempts to leak a type that we don't care about -->
+  <remove-node path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='IBeaconIntentProcessor']" />
+
+  <!-- Hide "private" Property fields -->
+  <remove-node path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='IBeacon']/field[@name='rssi']" />
+  <remove-node path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='IBeacon']/field[@name='accuracy']" />
+  <remove-node path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='IBeacon']/field[@name='major']" />
+  <remove-node path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='IBeacon']/field[@name='minor']" />
+  <remove-node path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='IBeacon']/field[@name='proximity']" />
+  <remove-node path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='IBeacon']/field[@name='proximityUuid']" />
+  <remove-node path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='Region']/field[@name='major']" />
+  <remove-node path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='Region']/field[@name='minor']" />
+  <remove-node path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='Region']/field[@name='proximityUuid']" />
+  <remove-node path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='Region']/field[@name='uniqueId']" />
+
+  <!-- Rename parameter names -->
+  <attr path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='Region']/constructor[@name='Region' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.Integer'] and parameter[4][@type='java.lang.Integer']]/parameter[@name='p0']" name="name">uniqueId</attr>
+  <attr path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='Region']/constructor[@name='Region' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.Integer'] and parameter[4][@type='java.lang.Integer']]/parameter[@name='p1']" name="name">proximityUuid</attr>
+  <attr path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='Region']/constructor[@name='Region' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.Integer'] and parameter[4][@type='java.lang.Integer']]/parameter[@name='p2']" name="name">major</attr>
+  <attr path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='Region']/constructor[@name='Region' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.Integer'] and parameter[4][@type='java.lang.Integer']]/parameter[@name='p3']" name="name">minor</attr>
+
+  <!-- IMonitorNotifier -->
+  <attr path="/api/package[@name='com.radiusnetworks.ibeacon']/interface[@name='MonitorNotifier']/method[@name='didEnterRegion' and count(parameter)=1 and parameter[1][@type='com.radiusnetworks.ibeacon.Region']]/parameter[@name='p0']" name="name">region</attr>
+  <attr path="/api/package[@name='com.radiusnetworks.ibeacon']/interface[@name='MonitorNotifier']/method[@name='didExitRegion' and count(parameter)=1 and parameter[1][@type='com.radiusnetworks.ibeacon.Region']]/parameter[@name='p0']" name="name">region</attr>
+  <attr path="/api/package[@name='com.radiusnetworks.ibeacon']/interface[@name='MonitorNotifier']/method[@name='didDetermineStateForRegion' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='com.radiusnetworks.ibeacon.Region']]/parameter[@name='p0']" name="name">state</attr>
+  <attr path="/api/package[@name='com.radiusnetworks.ibeacon']/interface[@name='MonitorNotifier']/method[@name='didDetermineStateForRegion' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='com.radiusnetworks.ibeacon.Region']]/parameter[@name='p1']" name="name">region</attr>
+
+  <!-- IBeaconManager -->
+  <attr path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='IBeaconManager']/method[@name='getInstanceForApplication' and count(parameter)=1 and parameter[1][@type='android.content.Context']]/parameter[@name='p0']" name="name">context</attr>
+  <attr path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='IBeaconManager']/method[@name='bind' and count(parameter)=1 and parameter[1][@type='com.radiusnetworks.ibeacon.IBeaconConsumer']]/parameter[@name='p0']" name="name">context</attr>
+  <attr path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='IBeaconManager']/method[@name='unBind' and count(parameter)=1 and parameter[1][@type='com.radiusnetworks.ibeacon.IBeaconConsumer']]/parameter[@name='p0']" name="name">context</attr>
+
+  <!-- IBeaconConsumer -->
+  <attr path="/api/package[@name='com.radiusnetworks.ibeacon']/interface[@name='IBeaconConsumer']/method[@name='bindService' and count(parameter)=3 and parameter[1][@type='android.content.Intent'] and parameter[2][@type='android.content.ServiceConnection'] and parameter[3][@type='int']]/parameter[@name='p0']" name="name">intent</attr>
+  <attr path="/api/package[@name='com.radiusnetworks.ibeacon']/interface[@name='IBeaconConsumer']/method[@name='bindService' and count(parameter)=3 and parameter[1][@type='android.content.Intent'] and parameter[2][@type='android.content.ServiceConnection'] and parameter[3][@type='int']]/parameter[@name='p1']" name="name">serviceConnection</attr>
+  <attr path="/api/package[@name='com.radiusnetworks.ibeacon']/interface[@name='IBeaconConsumer']/method[@name='bindService' and count(parameter)=3 and parameter[1][@type='android.content.Intent'] and parameter[2][@type='android.content.ServiceConnection'] and parameter[3][@type='int']]/parameter[@name='p2']" name="name">flags</attr>
+
+  <!-- IRangeNotifier -->
+  <attr path="/api/package[@name='com.radiusnetworks.ibeacon']/interface[@name='RangeNotifier']/method[@name='didRangeBeaconsInRegion']/parameter[@name='p0']" name="name">beacons</attr>
+  <attr path="/api/package[@name='com.radiusnetworks.ibeacon']/interface[@name='RangeNotifier']/method[@name='didRangeBeaconsInRegion']/parameter[@name='p1']" name="name">region</attr>
+  
+</metadata>
