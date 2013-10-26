@@ -10,8 +10,8 @@
   <attr path="/api/package[@name='com.radiusnetworks.ibeacon']" name="managedName">RadiusNetworks.IBeaconAndroid</attr>
   <attr path="/api/package[@name='com.radiusnetworks.ibeacon.service']" name="managedName">RadiusNetworks.IBeaconAndroid.Service</attr>
 
-  <!-- Hide internal class because it attempts to leak a type that we don't care about -->
-  <remove-node path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='IBeaconIntentProcessor']" />
+  <!-- Have IBeaconIntentProcessor extend mono.android.app.IntentService instead of android.app.IntentService -->
+  <attr path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='IBeaconIntentProcessor' and @extends='android.app.IntentService']" name="extends">mono.android.app.IntentService</attr>
 
   <!-- Hide "private" Property fields -->
   <remove-node path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='IBeacon']/field[@name='rssi']" />
@@ -50,5 +50,5 @@
   <!-- IRangeNotifier -->
   <attr path="/api/package[@name='com.radiusnetworks.ibeacon']/interface[@name='RangeNotifier']/method[@name='didRangeBeaconsInRegion']/parameter[@name='p0']" name="name">beacons</attr>
   <attr path="/api/package[@name='com.radiusnetworks.ibeacon']/interface[@name='RangeNotifier']/method[@name='didRangeBeaconsInRegion']/parameter[@name='p1']" name="name">region</attr>
-  
+
 </metadata>
