@@ -11,4 +11,10 @@
     <field jni-name="Fragment_tag" clr-name="Tag" value="2" />
   </mapping>
   -->
+  <mapping jni-class="com/radiusnetworks/ibeacon/IBeacon" clr-enum-type="RadiusNetworks.IBeaconAndroid.ProximityType">
+    <field jni-name="PROXIMITY_UNKNOWN" clr-name="Unknown" value="0" />
+    <field jni-name="PROXIMITY_IMMEDIATE" clr-name="Immediate" value="1" />
+    <field jni-name="PROXIMITY_NEAR" clr-name="Near" value="2" />
+    <field jni-name="PROXIMITY_FAR" clr-name="Far" value="3" />
+  </mapping>
 </enum-field-mappings>
