@@ -1,7 +1,7 @@
-Xamarin.Android iBeacon Service
+Xamarin Android iBeacon Service
 ===============================
 
-A Xamarin.Android binding of the [RadiusNetworks Android iBeacon Service](https://github.com/RadiusNetworks/android-ibeacon-service)
+A Xamarin.Android binding of the [Radius Networks' Android iBeacon Service](https://github.com/RadiusNetworks/android-ibeacon-service)
 
 
 ## License
@@ -16,7 +16,7 @@ This software is available under the Apache License 2.0, allowing you to use the
 
 ## Reference Application
 
-Check out the [R2 - Where are You?](https://github.com/chrisriesgo/R2-WhereAreYou) reference application for examples of Monitoring and Ranging Beacons.
+Check out the [Find The Monkey - Android](https://github.com/chrisriesgo/FindTheMonkey-Android) reference application for examples of Monitoring and Ranging Beacons.
 
 ## Questions?  Have I Missed Something?
 
