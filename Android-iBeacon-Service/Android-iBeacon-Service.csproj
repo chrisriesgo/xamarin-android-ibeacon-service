@@ -44,16 +44,18 @@
   <ItemGroup>
     <None Include="Jars\AboutJars.txt" />
     <None Include="Additions\AboutAdditions.txt" />
+    <LibraryProjectZip Include="Jars\AndroidIBeaconLibrary-0.7.3.aar" />
   </ItemGroup>
   <ItemGroup>
-    <TransformFile Include="Transforms\EnumFields.xml" />
-    <TransformFile Include="Transforms\EnumMethods.xml" />
+    <TransformFile Include="Transforms\EnumFields.xml">
+      <SubType>Designer</SubType>
+    </TransformFile>
+    <TransformFile Include="Transforms\EnumMethods.xml">
+      <SubType>Designer</SubType>
+    </TransformFile>
     <TransformFile Include="Transforms\Metadata.xml">
       <SubType>Designer</SubType>
     </TransformFile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedJar Include="Jars\android-ibeacon-service-1.0.jar" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

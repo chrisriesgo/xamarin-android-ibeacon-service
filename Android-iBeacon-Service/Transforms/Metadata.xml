@@ -12,7 +12,8 @@
 
   <!-- Have IBeaconIntentProcessor extend mono.android.app.IntentService instead of android.app.IntentService -->
   <attr path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='IBeaconIntentProcessor' and @extends='android.app.IntentService']" name="extends">mono.android.app.IntentService</attr>
-
+  <!--<attr path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='IBeacon']/method[@name='getProximity']" name="managedReturn">RadiusNetworks.IBeaconAndroid.ProximityType</attr>-->
+  
   <!-- Hide "private" Property fields -->
   <remove-node path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='IBeacon']/field[@name='rssi']" />
   <remove-node path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='IBeacon']/field[@name='accuracy']" />
