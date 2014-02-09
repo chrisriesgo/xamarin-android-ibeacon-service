@@ -21,10 +21,12 @@
   <remove-node path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='IBeacon']/field[@name='minor']" />
   <remove-node path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='IBeacon']/field[@name='proximity']" />
   <remove-node path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='IBeacon']/field[@name='proximityUuid']" />
+  <remove-node path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='IBeacon']/method[@name='getTxPower']" />
   <remove-node path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='Region']/field[@name='major']" />
   <remove-node path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='Region']/field[@name='minor']" />
   <remove-node path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='Region']/field[@name='proximityUuid']" />
   <remove-node path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='Region']/field[@name='uniqueId']" />
+  <remove-node path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='IBeaconManager']/method[@name='getDataRequestNotifier']" />
 
   <!-- Rename parameter names -->
   <attr path="/api/package[@name='com.radiusnetworks.ibeacon']/class[@name='Region']/constructor[@name='Region' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.Integer'] and parameter[4][@type='java.lang.Integer']]/parameter[@name='p0']" name="name">uniqueId</attr>
