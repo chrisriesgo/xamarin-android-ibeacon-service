@@ -45,7 +45,6 @@
   <ItemGroup>
     <None Include="Jars\AboutJars.txt" />
     <None Include="Additions\AboutAdditions.txt" />
-    <LibraryProjectZip Include="Jars\AndroidIBeaconLibrary-0.7.3-6.aar" />
   </ItemGroup>
   <ItemGroup>
     <TransformFile Include="Transforms\EnumFields.xml">
@@ -66,4 +65,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <EmbeddedJar Include="Jars\AndroidIBeaconLibrary-0.7.5-2.aar" />
+  </ItemGroup>
 </Project>
