@@ -66,6 +66,6 @@
   </Target>
   -->
   <ItemGroup>
-    <EmbeddedJar Include="Jars\AndroidIBeaconLibrary-0.7.5-2.aar" />
+    <LibraryProjectZip Include="Jars\AndroidIBeaconLibrary-0.7.5.aar" />
   </ItemGroup>
 </Project>

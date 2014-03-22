@@ -8,6 +8,7 @@
   -->
   <!-- Change the Namespace to avoid Type/Namespace name collisions -->
   <attr path="/api/package[@name='com.radiusnetworks.ibeacon']" name="managedName">RadiusNetworks.IBeaconAndroid</attr>
+  <attr path="/api/package[@name='com.radiusnetworks.ibeacon.client']" name="managedName">RadiusNetworks.IBeaconAndroid.Client</attr>
   <attr path="/api/package[@name='com.radiusnetworks.ibeacon.service']" name="managedName">RadiusNetworks.IBeaconAndroid.Service</attr>
 
   <!-- Have IBeaconIntentProcessor extend mono.android.app.IntentService instead of android.app.IntentService -->
