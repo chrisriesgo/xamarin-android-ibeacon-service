@@ -5,7 +5,7 @@ A Xamarin.Android binding of the [Radius Networks' Android iBeacon Service](http
 
 *This and the underpinned Radius Networks library are no longer being maintained.*
 
-*Instead, use the [AltBeacon Android Beacon Library](https://github.com/chrisriesgo/Xamarin-Android-Beacon-Library). This is built on the open and interoperable proximity beacon specification crafted by the Radius Networks team.*
+*Instead, use the [AltBeacon Android Beacon Library](https://github.com/chrisriesgo/Xamarin-Android-Beacon-Library) which is built on the open and interoperable proximity beacon specification crafted by the Radius Networks team.*
 
 ## License
 
